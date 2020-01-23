@@ -1,0 +1,37 @@
+DECLARE MName,FatherName : STRING
+DECLARE RNumber,MembershipValidity : STRING
+DECLARE SearchedName : STRING
+DECLARE IsFound : BOOLEAN
+
+MName  = ""
+FatherName = ""
+RNumber = ""
+MembershipValidity = ""
+SearchedName = ""
+IsFound = FALSE
+
+OUTPUT("Enter the name to be searched :")
+INPUT SearchedName
+SearchedName = UPPER(SearchedName)
+
+OPENFILE "D:\PROGRAMS\file practice\test.txt" FOR INPUT
+WHILE NOT EOF("D:\PROGRAMS\file practice\test.txt")AND IsFound = FALSE
+
+READFILE "D:\PROGRAMS\file practice\test.txt",MName
+READFILE "D:\PROGRAMS\file practice\test.txt",FatherNAme
+READFILE "D:\PROGRAMS\file practice\test.txt",RNumber
+READFILE "D:\PROGRAMS\file practice\test.txt",ValidityOfMembership
+
+IF SearchedName = UPPER(MName)
+  THEN
+     ISFound = TRUE
+OUTPUT("REGISTRATION ID for the following code is :"),RNum
+ENDIF
+
+ENDWHILE
+CLOSEFILE"D:\PROGRAMS\file practice\test.txt"
+
+IF IsFound = FALSE 
+   THEN 
+      OUTPUT("NAME NOT FOUND .....")
+ENDIF

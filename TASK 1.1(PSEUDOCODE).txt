@@ -1,0 +1,33 @@
+DECLARE MName,FatherName : STRING
+DECLARE RNumber,MembershipValidity : STRING
+DECLARE More : STRING
+
+MName  = ""
+FatherName = ""
+RNumber = ""
+MembershipValidity = ""
+More = ""
+
+OUTPUT("Enter Name of the Member : ")
+INPUT MName
+
+OUTPUT("Enter Father's Name : ")
+INPUT FatherName
+
+OUTPUT("Enter the registration number : ")
+INPUT RNumber
+
+OUTPUT("Enter the years valid for : ")
+INPUT MembershipValidity
+
+OPENFILE "D:\PROGRAMS\file practice\test.txt" FOR OUTPUT
+
+WRITEFILE "D:\PROGRAMS\file practice\test.txt",MName
+
+WRITEFILE "D:\PROGRAMS\file practice\test.txt",FatherName
+
+WRITEFILE "D:\PROGRAMS\file practice\test.txt",RName
+
+WRITEFILE "D:\PROGRAMS\file practice\test.txt",	MembershipValidity
+
+CLOSEFILE "D:\PROGRAMS\file practice\test.txt"

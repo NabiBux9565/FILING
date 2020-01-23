@@ -1,0 +1,25 @@
+DECLARE MName,FatherName : STRING
+DECLARE RNumber,MembershipValidity : STRING
+DECLARE More : STRING
+
+MName  = ""
+FatherName = ""
+RNumber = ""
+MembershipValidity = ""
+More = ""
+
+OPENFILE "D:\PROGRAMS\file practice\test.txt" FOR INPUT
+WHILE NOT EOF("D:\PROGRAMS\file practice\test.txt")
+
+READFILE "D:\PROGRAMS\file practice\test.txt",MName
+READFILE "D:\PROGRAMS\file practice\test.txt",FatherNAme
+READFILE "D:\PROGRAMS\file practice\test.txt",RNumber
+READFILE "D:\PROGRAMS\file practice\test.txt",ValidityOfMembership
+
+OUTPUT("Member's Name :") , MName
+OUTPUT("Father's Name : ") , FatherName
+OUTPUT("Registration number : "), RNumber
+OUTPUT("validity : "), ValidityOfMembership
+
+ENDWHILE
+CLOSEFILE"D:\PROGRAMS\file practice\test.txt"
